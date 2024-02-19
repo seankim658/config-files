@@ -1,0 +1,4 @@
+nvim/
+!nvim/lua/
+!nvim/lua/custom/
+!nvim/lua/custom/init.lua
