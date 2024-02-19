@@ -1,0 +1,1 @@
+/home/seank/.config/nvim/lua/custom/init.lua
