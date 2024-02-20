@@ -1,1 +1,2 @@
 alias smux='bash ~/scripts/tmux/c.sh'
+alias tmls='tmux ls'
