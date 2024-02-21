@@ -6,4 +6,4 @@ local opts = {
     null_ls.builtins.diagnostics.ruff,
   }
 }
-return opts 
+return opts
