@@ -1,2 +1,3 @@
 alias smux='bash ~/scripts/tmux/c.sh'
 alias tmls='tmux ls'
+alias senv='source env/bin/activate'
