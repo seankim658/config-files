@@ -5,3 +5,4 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
         virtual_text = false
     }
 )
+vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, {noremap = true, silent = true})
