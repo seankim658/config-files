@@ -8,7 +8,8 @@ local capabilities = configs.capabilities
 
 local lspconfig = require("lspconfig")
 
--- Python setup
+--- Python setup ---
+
 local function get_python_path(workspace)
   -- Use activated virtualenv
   if vim.env.VIRTUAL_ENV then

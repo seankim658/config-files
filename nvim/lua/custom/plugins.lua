@@ -9,7 +9,8 @@ local plugins = {
       ensure_installed = {
         "pyright",
         "mypy",
-        "ruff"
+        "ruff",
+        "black"
       }
     }
   },
@@ -26,6 +27,12 @@ local plugins = {
     opts = function()
       return require "custom.configs.null-ls"
     end
+  },
+  {
+    "folke/trouble.nvim",
+    lazy = false,
+    dependencies = {"nvim-tree/nvim-web-devicons"},
+    opts = {}
   }
 }
 
