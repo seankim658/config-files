@@ -9,6 +9,7 @@ options.modified.show_on_dirs = true
 options.modified.show_on_open_dirs = false
 options.git.enable = true
 options.filters.git_ignored = false
+options.renderer.special_files = {}
 options.renderer.highlight_modified = "name"
 options.renderer.highlight_git = true
 options.renderer.icons.show.modified = false
