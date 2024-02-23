@@ -4,6 +4,13 @@ local plugins = {
     ft = {"tsv", "csv"}
   },
   {
+    "nvim-treesitter/nvim-treesitter",
+    config = function ()
+      require "plugins.configs.treesitter"
+      require "custom.configs.treesitter"
+    end
+  },
+  {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
@@ -19,13 +26,6 @@ local plugins = {
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
-    end
-  },
-  {
-    "nvim-tree/nvim-tree.lua",
-    config = function ()
-      require "plugins.configs.nvimtree"
-      require "custom.configs.nvim-tree"
     end
   },
   {
