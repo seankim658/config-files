@@ -22,6 +22,13 @@ local plugins = {
     end
   },
   {
+    "nvim-tree/nvim-tree.lua",
+    config = function ()
+      require "plugins.configs.nvimtree"
+      require "custom.configs.nvim-tree"
+    end
+  },
+  {
     "jose-elias-alvarez/null-ls.nvim",
     ft = {"python"},
     opts = function()
