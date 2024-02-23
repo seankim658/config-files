@@ -16,4 +16,5 @@ vim.cmd [[
   hi NvimTreeGitNewIcon guifg=#B5CEA8 gui=bold
   hi NvimTreeGitRenamedIcon guifg=#B5CEA8 gui=bold
   hi NvimTreeGitStagedIcon guifg=#569CD6 gui=bold
+  hi NvimTreeModifiedIcon guifg=#6A9955 gui=bold
 ]]
