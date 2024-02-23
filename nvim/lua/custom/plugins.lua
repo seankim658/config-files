@@ -5,9 +5,15 @@ local plugins = {
   },
   {
     "nvim-treesitter/nvim-treesitter",
-    config = function ()
+    config = function()
       require "plugins.configs.treesitter"
       require "custom.configs.treesitter"
+    end
+  },
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = function()
+      return require "custom.configs.nvim-tree"
     end
   },
   {

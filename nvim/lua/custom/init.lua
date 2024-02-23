@@ -8,3 +8,12 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     }
 )
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, {noremap = true, silent = true})
+vim.cmd [[
+  hi NvimTreeGitDeletedIcon guifg=#C74E39 gui=bold
+  hi NvimTreeGitDirtyIcon guifg=#CE9178 gui=bold
+  hi NvimTreeGitIgnoredIcon guifg=#A9A9A9 gui=bold
+  hi NvimTreeGitMergeIcon guifg=#C586C0 gui=bold
+  hi NvimTreeGitNewIcon guifg=#B5CEA8 gui=bold
+  hi NvimTreeGitRenamedIcon guifg=#B5CEA8 gui=bold
+  hi NvimTreeGitStagedIcon guifg=#569CD6 gui=bold
+]]
