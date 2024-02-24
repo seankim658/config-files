@@ -25,7 +25,8 @@ local plugins = {
         "black",
         "typescript-language-server",
         "eslint_d",
-        "prettier"
+        "prettier",
+        "bash-language-server"
       }
     }
   },

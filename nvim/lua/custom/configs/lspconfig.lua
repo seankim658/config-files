@@ -16,7 +16,7 @@ local function get_python_path(workspace)
   end
 
   -- Find and use virtualenv in workspace directory
-  for _, pattern in pairs({"*", ".*"}) do
+  for _, pattern in pairs({ "*", ".*" }) do
     local match = vim.fn.glob(path.join(workspace, pattern, "pyvenv.cfg"))
     if match ~= '' then
       return path.join(path.dirname(match), "bin", "python")
@@ -30,7 +30,7 @@ end
 lspconfig.pyright.setup({
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = {"python"},
+  filetypes = { "python" },
   before_init = function(_, config)
     local env = get_python_path(config.root_dir)
     print(env)
@@ -43,10 +43,17 @@ lspconfig.pyright.setup({
 lspconfig.tsserver.setup({
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = {"typescript", "javascript"},
+  filetypes = { "typescript", "javascript" },
   init_options = {
     preferences = {
       disableSuggestions = true,
     }
   }
+})
+
+--- Bash setup ---
+lspconfig.bashls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "sh" }
 })
