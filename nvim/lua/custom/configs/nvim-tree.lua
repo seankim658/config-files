@@ -1,6 +1,7 @@
 local options = require("plugins.configs.nvimtree")
 
 options.view.signcolumn = "yes"
+options.view.width = 32
 if not options.modified then
   options.modified = {}
 end
@@ -15,7 +16,7 @@ options.renderer.highlight_git = true
 options.renderer.icons.show.modified = false
 options.renderer.icons.show.git = true
 options.renderer.icons.git_placement = "after"
-options.renderer.icons.padding = "   "
+options.renderer.icons.padding = "  "
 options.renderer.icons.glyphs.git = {
   unstaged = "M",
   staged = "A",
