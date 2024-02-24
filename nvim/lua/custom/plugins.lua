@@ -5,9 +5,8 @@ local plugins = {
   },
   {
     "nvim-treesitter/nvim-treesitter",
-    config = function()
-      require "plugins.configs.treesitter"
-      require "custom.configs.treesitter"
+    opts = function()
+      return require "plugins.configs.treesitter"
     end
   },
   {
@@ -23,7 +22,10 @@ local plugins = {
         "pyright",
         "mypy",
         "ruff",
-        "black"
+        "black",
+        "typescript-language-server",
+        "eslint_d",
+        "prettier"
       }
     }
   },
@@ -36,10 +38,23 @@ local plugins = {
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
-    ft = {"python"},
-    opts = function()
-      return require "custom.configs.null-ls"
-    end
+    config = function()
+      require "custom.configs.null-ls"
+    end,
+    ft = {
+      "python",
+      "javascript",
+      "jsx",
+      "typescript",
+      "tsx",
+      "html",
+      "css",
+      "scss",
+      "markdown",
+      "json",
+      "vue",
+      "yaml"
+    }
   },
   {
     "folke/trouble.nvim",
