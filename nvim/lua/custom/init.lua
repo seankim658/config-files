@@ -9,6 +9,12 @@ vim.api.nvim_set_keymap("n", "<A-2>", "<C-w>-", { noremap = true, silent = true 
 vim.api.nvim_set_keymap("n", "<A-3>", "<C-w><", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<A-4>", "<C-w>>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<A-5>", "<C-w>=", { noremap = true, silent = true })
+vim.keymap.set("i", "jj", "<Esc>")
+vim.keymap.set("n", "d", "\"_d")
+vim.keymap.set("v", "d", "\"_d")
+vim.keymap.set("n", "c", "\"_c")
+vim.keymap.set("v", "c", "\"_c")
+vim.keymap.set("n", "x", "\"_x")
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     virtual_text = false
