@@ -2,7 +2,6 @@ local configs = require("plugins.configs.lspconfig")
 local util = require("lspconfig/util")
 
 local path = util.path
-
 local on_attach = configs.on_attach
 local capabilities = configs.capabilities
 
@@ -37,4 +36,17 @@ lspconfig.pyright.setup({
     print(env)
     config.settings.python.pythonPath = env
   end
+})
+
+--- Typescript/JS setup ---
+
+lspconfig.tsserver.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {"typescript", "javascript"},
+  init_options = {
+    preferences = {
+      disableSuggestions = true,
+    }
+  }
 })
