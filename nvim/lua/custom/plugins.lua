@@ -45,9 +45,9 @@ local plugins = {
     ft = {
       "python",
       "javascript",
-      "jsx",
+      "javascriptreact",
       "typescript",
-      "tsx",
+      "typescriptreact",
       "html",
       "css",
       "scss",
