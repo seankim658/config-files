@@ -51,8 +51,13 @@ local black = null_ls.builtins.formatting.black.with({
 
 -- Javascript/Typescript Config --
 
-local eslint_d = null_ls.builtins.diagnostics.eslint_d.with({
-  filetypes = { "javascript", "typescript", "jsx", "tsx" }
+local eslint_d_diagnostics = null_ls.builtins.diagnostics.eslint_d.with({
+  diagnostic_config = diagnostic_config,
+  filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" }
+})
+
+local eslint_d_code_actions = null_ls.builtins.code_actions.eslint_d.with({
+  filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" }
 })
 
 -- Prettier --
@@ -60,9 +65,9 @@ local eslint_d = null_ls.builtins.diagnostics.eslint_d.with({
 local prettier = null_ls.builtins.formatting.prettier.with({
   filetypes = {
     "javascript",
-    "jsx",
+    "javascriptreact",
     "typescript",
-    "tsx",
+    "typescriptreact",
     "css",
     "scss",
     "html",
@@ -80,7 +85,8 @@ local opts = {
     mypy,
     ruff,
     black,
-    eslint_d,
+    eslint_d_diagnostics,
+    eslint_d_code_actions,
     prettier
   }
 }
