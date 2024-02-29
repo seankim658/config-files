@@ -57,3 +57,10 @@ lspconfig.bashls.setup({
   capabilities = capabilities,
   filetypes = { "sh" }
 })
+
+--- Markdown setup ---
+lspconfig.marksman.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "markdown" }
+})
