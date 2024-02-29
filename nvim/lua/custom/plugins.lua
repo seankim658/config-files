@@ -1,12 +1,8 @@
 local plugins = {
   {
-    "mechatroner/rainbow_csv",
-    ft = {"tsv", "csv"}
-  },
-  {
     "nvim-treesitter/nvim-treesitter",
     opts = function()
-      return require "plugins.configs.treesitter"
+      return require "custom.configs.treesitter"
     end
   },
   {
@@ -26,7 +22,8 @@ local plugins = {
         "typescript-language-server",
         "eslint_d",
         "prettier",
-        "bash-language-server"
+        "bash-language-server",
+        "marksman"
       }
     }
   },
@@ -60,8 +57,18 @@ local plugins = {
   {
     "folke/trouble.nvim",
     lazy = false,
-    dependencies = {"nvim-tree/nvim-web-devicons"},
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {}
+  },
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end
+  },
+  {
+    "mechatroner/rainbow_csv",
+    ft = { "tsv", "csv" }
   }
 }
 
