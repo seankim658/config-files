@@ -7,4 +7,12 @@ options.indent = {
   }
 }
 
+options.highlight = {
+  enable = true,
+  disable = {
+    "tsv",
+    "csv"
+  }
+}
+
 return options
