@@ -51,7 +51,16 @@ lspconfig.tsserver.setup({
   }
 })
 
+--- C/C++ setup ---
+
+lspconfig.clangd.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "c", "cpp" }
+})
+
 --- Bash setup ---
+
 lspconfig.bashls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
@@ -59,6 +68,7 @@ lspconfig.bashls.setup({
 })
 
 --- Markdown setup ---
+
 lspconfig.marksman.setup({
   on_attach = on_attach,
   capabilities = capabilities,

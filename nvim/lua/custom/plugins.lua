@@ -23,7 +23,8 @@ local plugins = {
         "eslint_d",
         "prettier",
         "bash-language-server",
-        "marksman"
+        "marksman",
+        "clangd"
       }
     }
   },
