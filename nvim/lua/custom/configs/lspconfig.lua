@@ -74,3 +74,11 @@ lspconfig.marksman.setup({
   capabilities = capabilities,
   filetypes = { "markdown" }
 })
+
+--- Rust setup ---
+
+lspconfig.rust_analyzer.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "rust" }
+})
