@@ -24,7 +24,8 @@ local plugins = {
         "prettier",
         "bash-language-server",
         "marksman",
-        "clangd"
+        "clangd",
+        "rust-analyzer"
       }
     }
   },
