@@ -1,4 +1,5 @@
 vim.opt.relativenumber = true
+vim.opt.colorcolumn = "150"
 vim.api.nvim_set_keymap("n", "<leader>xx", "<cmd>Trouble<cr>", { silent = true, noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
   { silent = true, noremap = true })
