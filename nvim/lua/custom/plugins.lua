@@ -25,7 +25,8 @@ local plugins = {
         "bash-language-server",
         "marksman",
         "clangd",
-        "rust-analyzer"
+        "rust-analyzer",
+        "fixjson"
       }
     }
   },
