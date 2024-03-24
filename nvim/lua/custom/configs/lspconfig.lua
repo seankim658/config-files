@@ -33,7 +33,7 @@ lspconfig.pyright.setup({
   filetypes = { "python" },
   before_init = function(_, config)
     local env = get_python_path(config.root_dir)
-    print(env)
+    print(string.format("Python path: %s", env))
     config.settings.python.pythonPath = env
   end
 })
