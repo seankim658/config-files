@@ -18,19 +18,25 @@ local diagnostic_config = {
 local function get_mypy_path(workspace)
   -- Use activated virtual env if possible
   if vim.env.VIRTUAL_ENV then
-    return path.join(vim.env.VIRTUAL_ENV, 'bin', 'mypy')
+    local mypy_path = path.join(vim.env.VIRTUAL_ENV, 'bin', 'mypy')
+    print(string.format("mypy path: %s", mypy_path))
+    return mypy_path
   end
 
   -- Find and use virtual env in workspace directory
   for _, pattern in ipairs({ "*", ",*" }) do
     local match = vim.fn.glob(path.join(workspace, pattern, "pyenv.cfg"))
     if match ~= '' then
-      return path.join(path.dirname(match), "bin", "python")
+      local mypy_path =  path.join(path.dirname(match), "bin", "python")
+      print(string.format("mypy path: %s", mypy_path))
+      return mypy_path
     end
   end
 
-  -- Fallback to system mypy.
-  return vim.fn.exepath("mypy") or "mypy"
+  -- Don't use mypy
+  print("No virtual env mypy")
+  return nil
+  -- vim.fn.exepath("mypy") or "mypy"
 end
 
 local mypy = null_ls.builtins.diagnostics.mypy.with({
