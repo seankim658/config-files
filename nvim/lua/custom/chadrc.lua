@@ -2,7 +2,7 @@
 local M = {}
 
 M.ui = {
-  theme = 'palenight',
+  theme = 'doomchad',
   nvdash = {
     load_on_startup = true
   }
