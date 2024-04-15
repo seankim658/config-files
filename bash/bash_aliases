@@ -1,5 +1,6 @@
 alias cmux='bash ~/scripts/tmux/c.sh'
 alias wmux='bash ~/scripts/tmux/a.sh'
 alias tmls='tmux ls'
+alias tmla='tmux a'
 alias senv='source env/bin/activate'
 alias ovi='bash ~/scripts/tmux/session.sh'
